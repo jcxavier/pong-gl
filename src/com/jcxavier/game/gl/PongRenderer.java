@@ -4,22 +4,25 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.util.Log;
-import com.jcxavier.game.gl.player.AIPlayer;
-import com.jcxavier.game.gl.player.HumanPlayer;
 import com.jcxavier.game.gl.logic.Ball;
 import com.jcxavier.game.gl.logic.GameObject;
 import com.jcxavier.game.gl.logic.Pad;
-import com.jcxavier.game.gl.util.Point;
+import com.jcxavier.game.gl.player.AIPlayer;
+import com.jcxavier.game.gl.player.HumanPlayer;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 /**
- * Created by jcxavier on 10/07/2013.
+ * Created on 10/07/2013.
+ *
+ * @author João Xavier <jcxavier@jcxavier.com>
  */
-public class PongRenderer implements GLSurfaceView.Renderer {
+class PongRenderer implements GLSurfaceView.Renderer {
 
     private static final String TAG = PongRenderer.class.getSimpleName();
+
+    private static final int MATRIX_SIZE = 4 * 4;
 
     // GLSL shader code
     private final String mVertexShader =
@@ -41,14 +44,14 @@ public class PongRenderer implements GLSurfaceView.Renderer {
     private int maPositionHandle;
 
     // GL matrixes
-    private final float[] mMVPMatrix = new float[16];
-    private final float[] mProjMatrix = new float[16];
-    private final float[] mVMatrix = new float[16];
-    private final float[] mMMatrix = new float[16];
-    private float[] mTempMatrix = new float[16];
+    private final float[] mMVPMatrix = new float[MATRIX_SIZE];
+    private final float[] mProjMatrix = new float[MATRIX_SIZE];
+    private final float[] mVMatrix = new float[MATRIX_SIZE];
+    private final float[] mMMatrix = new float[MATRIX_SIZE];
+    private float[] mTempMatrix = new float[MATRIX_SIZE];
 
     // activity handle for score updates
-    private PongActivity mActivity;
+    private final PongActivity mActivity;
 
     // game logic
     private static final float SCREEN_WIDTH = 1.7f;
@@ -61,15 +64,14 @@ public class PongRenderer implements GLSurfaceView.Renderer {
     public volatile float speed;
 
     public PongRenderer(PongActivity activity) {
-        super();
         mActivity = activity;
     }
 
     private void initGameLogic() {
         speed = 0.0f;
         mBall = new Ball();
-        mPlayerOne = new HumanPlayer(new Pad(Pad.Side.LEFT), mBall);
-        mPlayerTwo = new AIPlayer( new Pad(Pad.Side.RIGHT), mBall);
+        mPlayerOne = new HumanPlayer(new Pad(Pad.Side.LEFT));
+        mPlayerTwo = new AIPlayer(new Pad(Pad.Side.RIGHT), mBall);
 
         mActivity.updateScore(mPlayerOne.getPoints(), mPlayerTwo.getPoints());
     }
@@ -163,9 +165,8 @@ public class PongRenderer implements GLSurfaceView.Renderer {
     }
 
     private void moveAndDrawGameObject(GameObject gameObject) {
-        Point position = gameObject.getPosition();
         Matrix.setIdentityM(mMMatrix, 0);
-        Matrix.translateM(mMMatrix, 0, position.x, position.y, 0);
+        Matrix.translateM(mMMatrix, 0, gameObject.position.x, gameObject.position.y, 0);
 
         mTempMatrix = mMVPMatrix.clone();
         Matrix.multiplyMM(mTempMatrix, 0, mVMatrix, 0, mMMatrix, 0);

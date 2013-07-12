@@ -1,21 +1,18 @@
 package com.jcxavier.game.gl.player;
 
-import com.jcxavier.game.gl.logic.Ball;
 import com.jcxavier.game.gl.logic.Pad;
 
 /**
- * Created by jcxavier on 10/07/2013.
+ * Created on 10/07/2013.
+ *
+ * @author João Xavier <jcxavier@jcxavier.com>
  */
 public abstract class Player {
-    protected final Pad mPad;
-    protected final Ball mBall;
-
+    final Pad mPad;
     private int mPoints;
 
-    public Player(Pad pad, Ball ball) {
+    Player(Pad pad) {
         mPad = pad;
-        mBall = ball;
-
         mPoints = 0;
     }
 

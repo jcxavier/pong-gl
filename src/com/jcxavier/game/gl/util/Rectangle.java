@@ -1,7 +1,9 @@
 package com.jcxavier.game.gl.util;
 
 /**
- * Created by jcxavier on 10/07/2013.
+ * Created on 10/07/2013.
+ *
+ * @author João Xavier <jcxavier@jcxavier.com>
  */
 public class Rectangle {
     public final float x;
