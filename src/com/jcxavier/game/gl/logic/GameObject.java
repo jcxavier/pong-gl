@@ -10,14 +10,14 @@ import java.nio.ShortBuffer;
  */
 public abstract class GameObject {
     // GL Stuff
-    protected FloatBuffer vertexBuffer;
-    protected ShortBuffer drawListBuffer;
+    FloatBuffer vertexBuffer;
+    ShortBuffer drawListBuffer;
 
-    protected int mPositionHandle;
-    protected int mColorHandle;
-    protected int mMVPMatrixHandle;
+    int mPositionHandle;
+    int mColorHandle;
+    int mMVPMatrixHandle;
 
-    protected int vertexStride;
+    int vertexStride;
 
     public Point position;
 

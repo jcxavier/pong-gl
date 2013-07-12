@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 public class PongActivity extends Activity {
 
-    private GLSurfaceView mGLView;
     private TextView mScore;
 
     @Override
@@ -20,12 +19,10 @@ public class PongActivity extends Activity {
 
         mScore = (TextView) gameView.findViewById(R.id.score);
 
-        // Create a GLSurfaceView instance and set it
-        // as the ContentView for this Activity.
-        mGLView = new PongSurfaceView(this);
-        mGLView.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
+        GLSurfaceView glSurfaceView = new PongSurfaceView(this);
+        glSurfaceView.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
 
-        gameView.addView(mGLView);
+        gameView.addView(glSurfaceView);
         mScore.bringToFront();
     }
 

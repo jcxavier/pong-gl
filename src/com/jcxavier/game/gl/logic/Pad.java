@@ -12,7 +12,7 @@ import java.nio.ByteOrder;
  */
 public class Pad extends GameObject {
 
-    public enum Side {LEFT, RIGHT};
+    public enum Side { LEFT, RIGHT }
 
     // number of coordinates per vertex in this array
     private static final int COORDS_PER_VERTEX = 3;
