@@ -1,4 +1,4 @@
-package com.jcxavier.game.pong.logic;
+package com.jcxavier.game.gl.logic;
 
 /**
  * Created by jcxavier on 10/07/2013.

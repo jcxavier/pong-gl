@@ -1,4 +1,4 @@
-package com.jcxavier.game.pong.util;
+package com.jcxavier.game.gl.util;
 
 /**
  * Created by jcxavier on 10/07/2013.

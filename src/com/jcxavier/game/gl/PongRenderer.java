@@ -1,15 +1,15 @@
-package com.jcxavier.game.pong;
+package com.jcxavier.game.gl;
 
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.util.Log;
-import com.jcxavier.game.pong.player.AIPlayer;
-import com.jcxavier.game.pong.player.HumanPlayer;
-import com.jcxavier.game.pong.logic.Ball;
-import com.jcxavier.game.pong.logic.GameObject;
-import com.jcxavier.game.pong.logic.Pad;
-import com.jcxavier.game.pong.util.Point;
+import com.jcxavier.game.gl.player.AIPlayer;
+import com.jcxavier.game.gl.player.HumanPlayer;
+import com.jcxavier.game.gl.logic.Ball;
+import com.jcxavier.game.gl.logic.GameObject;
+import com.jcxavier.game.gl.logic.Pad;
+import com.jcxavier.game.gl.util.Point;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;

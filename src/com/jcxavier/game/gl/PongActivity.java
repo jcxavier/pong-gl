@@ -1,4 +1,4 @@
-package com.jcxavier.game.pong;
+package com.jcxavier.game.gl;
 
 import android.app.Activity;
 import android.opengl.GLSurfaceView;

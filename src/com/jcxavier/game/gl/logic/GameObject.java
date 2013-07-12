@@ -1,6 +1,6 @@
-package com.jcxavier.game.pong.logic;
+package com.jcxavier.game.gl.logic;
 
-import com.jcxavier.game.pong.util.Point;
+import com.jcxavier.game.gl.util.Point;
 
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;

@@ -5,6 +5,7 @@ gen
 
 # Android Studio
 .idea
+*.iml
 out
 
 # Mac OS X crap

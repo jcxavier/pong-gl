@@ -1,8 +1,7 @@
-package com.jcxavier.game.pong.player;
+package com.jcxavier.game.gl.player;
 
-import com.jcxavier.game.pong.logic.Ball;
-import com.jcxavier.game.pong.logic.Pad;
-import com.jcxavier.game.pong.player.Player;
+import com.jcxavier.game.gl.logic.Ball;
+import com.jcxavier.game.gl.logic.Pad;
 
 /**
  * Created by jcxavier on 10/07/2013.

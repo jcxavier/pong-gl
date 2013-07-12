@@ -1,13 +1,11 @@
-package com.jcxavier.game.pong.logic;
+package com.jcxavier.game.gl.logic;
 
 import android.opengl.GLES20;
-import com.jcxavier.game.pong.util.Point;
-import com.jcxavier.game.pong.util.Rectangle;
+import com.jcxavier.game.gl.util.Point;
+import com.jcxavier.game.gl.util.Rectangle;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import java.nio.FloatBuffer;
-import java.nio.ShortBuffer;
 
 /**
  * Created by jcxavier on 10/07/2013.
