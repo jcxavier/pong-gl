@@ -1,0 +1,11 @@
+# Android
+bin
+gen
+*.apk
+
+# Android Studio
+.idea
+out
+
+# Mac OS X crap
+.DS_Store
