@@ -3,7 +3,6 @@ package com.jcxavier.game.gl;
 import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.view.MotionEvent;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * Created on 10/07/2013.

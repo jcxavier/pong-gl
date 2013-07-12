@@ -4,11 +4,11 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.util.Log;
-import com.jcxavier.game.gl.player.AIPlayer;
-import com.jcxavier.game.gl.player.HumanPlayer;
 import com.jcxavier.game.gl.logic.Ball;
 import com.jcxavier.game.gl.logic.GameObject;
 import com.jcxavier.game.gl.logic.Pad;
+import com.jcxavier.game.gl.player.AIPlayer;
+import com.jcxavier.game.gl.player.HumanPlayer;
 import com.jcxavier.game.gl.util.Point;
 
 import javax.microedition.khronos.egl.EGLConfig;
@@ -72,8 +72,8 @@ class PongRenderer implements GLSurfaceView.Renderer {
     private void initGameLogic() {
         speed = 0.0f;
         mBall = new Ball();
-        mPlayerOne = new HumanPlayer(new Pad(Pad.Side.LEFT), mBall);
-        mPlayerTwo = new AIPlayer( new Pad(Pad.Side.RIGHT), mBall);
+        mPlayerOne = new HumanPlayer(new Pad(Pad.Side.LEFT));
+        mPlayerTwo = new AIPlayer(new Pad(Pad.Side.RIGHT), mBall);
 
         mActivity.updateScore(mPlayerOne.getPoints(), mPlayerTwo.getPoints());
     }
@@ -167,9 +167,8 @@ class PongRenderer implements GLSurfaceView.Renderer {
     }
 
     private void moveAndDrawGameObject(GameObject gameObject) {
-        Point position = gameObject.position;
         Matrix.setIdentityM(mMMatrix, 0);
-        Matrix.translateM(mMMatrix, 0, position.x, position.y, 0);
+        Matrix.translateM(mMMatrix, 0, gameObject.position.x, gameObject.position.y, 0);
 
         mTempMatrix = mMVPMatrix.clone();
         Matrix.multiplyMM(mTempMatrix, 0, mVMatrix, 0, mMMatrix, 0);

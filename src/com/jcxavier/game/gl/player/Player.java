@@ -10,14 +10,10 @@ import com.jcxavier.game.gl.logic.Pad;
  */
 public abstract class Player {
     final Pad mPad;
-    final Ball mBall;
-
     private int mPoints;
 
-    Player(Pad pad, Ball ball) {
+    Player(Pad pad) {
         mPad = pad;
-        mBall = ball;
-
         mPoints = 0;
     }
 

@@ -11,8 +11,11 @@ import com.jcxavier.game.gl.logic.Pad;
 public class AIPlayer extends Player {
     private static final float AI_MOVE_SPEED = 0.02f;
 
+    private final Ball mBall;
+
     public AIPlayer(Pad pad, Ball ball) {
-        super(pad, ball);
+        super(pad);
+        mBall = ball;
     }
 
     public void play() {

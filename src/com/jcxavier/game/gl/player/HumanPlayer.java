@@ -9,8 +9,8 @@ import com.jcxavier.game.gl.logic.Pad;
  * @author João Xavier <jcxavier@jcxavier.com>
  */
 public class HumanPlayer extends Player {
-    public HumanPlayer(Pad pad, Ball ball) {
-        super(pad, ball);
+    public HumanPlayer(Pad pad) {
+        super(pad);
     }
 
     @Override
