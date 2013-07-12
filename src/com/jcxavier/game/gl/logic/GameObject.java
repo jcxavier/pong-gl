@@ -23,18 +23,17 @@ public abstract class GameObject {
     private final float[] mColor;
 
     // GL Stuff
-    FloatBuffer mVertexBuffer;
-    ShortBuffer mDrawListBuffer;
+    private final FloatBuffer mVertexBuffer;
+    private final ShortBuffer mDrawListBuffer;
+    private final int mVertexStride;
 
-    int mPositionHandle;
-    int mColorHandle;
-    int mMVPMatrixHandle;
-
-    int mVertexStride;
+    private int mPositionHandle;
+    private int mColorHandle;
+    private int mMVPMatrixHandle;
 
     public final Point position;
 
-    protected GameObject(final float[] coordinates, final float[] color) {
+    GameObject(final float[] coordinates, final float[] color) {
         mColor = color;
 
         position = new Point();

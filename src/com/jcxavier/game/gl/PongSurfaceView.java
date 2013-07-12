@@ -9,7 +9,7 @@ import android.view.MotionEvent;
  *
  * @author João Xavier <jcxavier@jcxavier.com>
  */
-public class PongSurfaceView extends GLSurfaceView {
+class PongSurfaceView extends GLSurfaceView {
     // yay for magic numbers, tweak for input experience
     private static final float TOUCH_SCALE_FACTOR = 180.0f / (320 * 2000);
 
