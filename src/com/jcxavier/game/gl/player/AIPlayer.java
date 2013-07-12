@@ -4,7 +4,9 @@ import com.jcxavier.game.gl.logic.Ball;
 import com.jcxavier.game.gl.logic.Pad;
 
 /**
- * Created by jcxavier on 10/07/2013.
+ * Created on 10/07/2013.
+ *
+ * @author João Xavier <jcxavier@jcxavier.com>
  */
 public class AIPlayer extends Player {
     private static final float AI_MOVE_SPEED = 0.02f;
