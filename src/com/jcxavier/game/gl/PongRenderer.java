@@ -9,7 +9,6 @@ import com.jcxavier.game.gl.logic.GameObject;
 import com.jcxavier.game.gl.logic.Pad;
 import com.jcxavier.game.gl.player.AIPlayer;
 import com.jcxavier.game.gl.player.HumanPlayer;
-import com.jcxavier.game.gl.util.Point;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -65,7 +64,6 @@ class PongRenderer implements GLSurfaceView.Renderer {
     public volatile float speed;
 
     public PongRenderer(PongActivity activity) {
-        super();
         mActivity = activity;
     }
 

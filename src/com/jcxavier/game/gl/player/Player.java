@@ -1,6 +1,5 @@
 package com.jcxavier.game.gl.player;
 
-import com.jcxavier.game.gl.logic.Ball;
 import com.jcxavier.game.gl.logic.Pad;
 
 /**

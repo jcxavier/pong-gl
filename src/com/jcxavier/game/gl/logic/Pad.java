@@ -9,13 +9,16 @@ import com.jcxavier.game.gl.util.Rectangle;
  */
 public class Pad extends GameObject {
 
-    public enum Side { LEFT, RIGHT }
+    public enum Side {
+        LEFT,
+        RIGHT
+    }
 
-    private static final float PAD_HEIGHT =     0.25f;
-    private static final float PAD_OFFSET_X =   1.45f;
-    private static final float PAD_WIDTH =      0.05f;
+    private static final float PAD_HEIGHT = 0.25f;
+    private static final float PAD_OFFSET_X = 1.45f;
+    private static final float PAD_WIDTH = 0.05f;
 
-    private static final float[] PAD_COLOR =    new float[] { 1.0f, 1.0f, 1.0f, 1.0f };
+    private static final float[] PAD_COLOR = new float[] { 1.0f, 1.0f, 1.0f, 1.0f };
 
     private static final float PAD_LEFT_COORDS[] = {
             PAD_OFFSET_X, PAD_HEIGHT, 0.0f,  // top left

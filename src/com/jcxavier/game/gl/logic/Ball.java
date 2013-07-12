@@ -9,17 +9,17 @@ import com.jcxavier.game.gl.util.Rectangle;
  */
 public class Ball extends GameObject {
 
-    private static final float BALL_SIZE =      0.02f;
-    private static final float[] BALL_COLOR =   new float[] { 1.0f, 1.0f, 1.0f, 1.0f };
-    private static final float[] BALL_COORDS =  {
-            -BALL_SIZE,  BALL_SIZE, 0.0f, // top left
+    private static final float BALL_SIZE = 0.02f;
+    private static final float[] BALL_COLOR = new float[] { 1.0f, 1.0f, 1.0f, 1.0f };
+    private static final float[] BALL_COORDS = {
+            -BALL_SIZE, BALL_SIZE, 0.0f, // top left
             -BALL_SIZE, -BALL_SIZE, 0.0f, // bottom left
-             BALL_SIZE, -BALL_SIZE, 0.0f, // bottom right
-             BALL_SIZE,  BALL_SIZE, 0.0f  // top right
+            BALL_SIZE, -BALL_SIZE, 0.0f, // bottom right
+            BALL_SIZE, BALL_SIZE, 0.0f  // top right
     };
 
-    private static final float SPEED_OFFSET =   0.01f;
-    private static final float SPEED_RANGE =    0.03f;
+    private static final float SPEED_OFFSET = 0.01f;
+    private static final float SPEED_RANGE = 0.03f;
 
     private float mXSpeed;
     private float mYSpeed;
@@ -31,7 +31,7 @@ public class Ball extends GameObject {
     }
 
     private float randomSign() {
-        int zeroOrOne = (int) (Math.random() + 1/2);
+        int zeroOrOne = (int) (Math.random() + 1 / 2);
         return zeroOrOne == 1 ? 1.0f : -1.0f;
     }
 
